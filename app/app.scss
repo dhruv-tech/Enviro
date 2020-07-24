@@ -1,21 +1,88 @@
 @import "~@nativescript/theme/core";
 @import "~@nativescript/theme/blue";
 
-// Place any CSS rules you want to apply on both iOS and Android here.
-// This is where the vast majority of your CSS code goes.
-
-// Font icon class
-.fab {
-    font-family: "Font Awesome 5 Brands", "fa-brands-400";
-    font-weight: 400;
+Page {
+    background: linear-gradient(180deg, rgba(39,75,175,1) 7%, rgba(37,129,185,1) 100%);
+    text-align: center;
 }
 
-.fas {
-    font-family: "Font Awesome 5 Free", "fa-solid-900";
-    font-weight: 900;
+.title {
+    color: rgba(255,255,255, 0.7);
+    margin-top: 65;
+    font-size: 19;
+    font-family: 'Poppins ExtraBold', 'Poppins-ExtraBold';
+    text-transform: uppercase;
+    letter-spacing: 0.325;
+    width: 100%;
 }
 
-.far {
-    font-family: "Font Awesome 5 Free", "fa-regular-400";
-    font-weight: 400;
+.center-text {
+    horizontal-align: center;
+}
+
+.card {
+    height: 95;
+    border-radius: 10;
+}
+
+#title-card {
+    margin-top: 30;
+    height: 82.5;
+    width: 80%;
+    margin-left: 5%;
+}
+
+.span {
+    width: 100%;
+}
+
+.span-85 {
+    width: 85%;
+}
+
+.subtitle {
+    color: rgba(255,255,255, 0.7);
+    margin-top: 35;
+    margin-left: 8%;
+    margin-bottom: 9;
+    font-size: 19;
+    font-family: 'Poppins Bold', 'Poppins-Bold';
+    text-transform: capitalize;
+    letter-spacing: 0.155;
+    width: 93%;
+    text-align: left;
+}
+
+#status-img-container {
+    margin-top: -111;
+    width: 100%;
+    horizontal-align: left;
+}
+
+#status-img {
+    margin-left: 10;
+}
+
+.pull-up {
+    margin-top: 20;
+}
+
+.circle {
+    width: 21%;
+    clip-path: circle(100% at 50% 50%);
+}
+.spacer-x {
+    width: 14%;
+}
+
+#footer-logo {
+    margin-top: 30;
+    margin-bottom: 2.5;
+}
+
+#footer-text {
+    color: rgba(255,255,255, 0.77);
+    font-family: "Roboto";
+    font-size: 12.5;
+    margin-bottom: 15;
 }
