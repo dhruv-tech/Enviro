@@ -4,12 +4,15 @@
         <StackLayout orientation="vertical" class="center-text">
           <Label text="Hyderabad" class="title"/>
 
-          <FlexboxLayout flexDirection="column" backgroundColor="#ffffff" id="title-card" class="span-85 card">
-            
-          </FlexboxLayout>
+          <StackLayout backgroundColor="#ffffff" id="title-card" class="span-85 card">
+            <Label text="Satisfactory" class="status satisfactory"/>
+            <Label text="Indraprastha – DPCC" class="location-area"/>
+            <Label text="Prominent Pollutant: PM2.5" class="poll-main" />
+          </StackLayout>
 
           <GridLayout rows="auto" columns="145" id="status-img-container">
             <Image src="~/components/imgs/satisfactory.png" stretch="aspectFit" id="status-img"/>
+            <Label text="15" class="aqi"/>
           </GridLayout>
 
           <Label text="For You" class="subtitle pull-up"/>

@@ -27,9 +27,43 @@ Page {
 
 #title-card {
     margin-top: 30;
-    height: 82.5;
+    height: 85;
     width: 80%;
     margin-left: 5%;
+    text-align: left;
+    padding-top: 5;
+    font-family: 'Poppins Bold', 'Poppins-Bold';
+}
+
+#title-card Label {
+    margin-left: 87;
+    padding: 0;
+}
+
+.status {
+    font-size: 20;
+}
+
+.aqi {
+    color: rgba(255,255,255, 1);
+    font-family: 'Poppins ExtraBold', 'Poppins-ExtraBold';
+    font-size: 32.5;
+    margin-top: 43.9;
+}
+
+.location-area {
+    font-size: 14.5;
+    margin-top: -5;
+}
+
+.poll-main {
+    font-family: 'Poppins', 'Poppins-Regular';
+    font-size: 13;
+    margin-top: -2.5;
+}
+
+.satisfactory {
+    color: #70AD47;
 }
 
 .span {
@@ -68,11 +102,11 @@ Page {
 }
 
 .circle {
-    width: 21%;
+    width: 35%;
     clip-path: circle(100% at 50% 50%);
 }
 .spacer-x {
-    width: 14%;
+    width: 5%;
 }
 
 #footer-logo {
