@@ -13,7 +13,14 @@
   "repository": "<fill-your-repository-here>",
   "dependencies": {
     "@nativescript/theme": "~2.3.0",
+    "@vue/devtools": "^5.3.3",
+    "nativescript-geolocation": "^5.1.0",
+    "nativescript-socket.io": "^0.11.1",
+    "nativescript-socketio": "^3.3.1",
+    "nativescript-toast": "^2.0.0",
+    "nativescript-toasty": "^3.0.0-alpha.2",
     "nativescript-vue": "~2.4.0",
+    "nativescript-vue-devtools": "^1.4.0",
     "tns-core-modules": "~6.5.0"
   },
   "devDependencies": {

@@ -1,0 +1,23 @@
+@import './animate.scss';
+
+.title {
+    color: rgba(255,255,255, 0.7);
+    margin-top: 0;
+    font-size: 19;
+    font-family: 'Poppins ExtraBold', 'Poppins-ExtraBold';
+    text-transform: uppercase;
+    letter-spacing: 0.325;
+    width: 100%;
+}
+
+#enviro-leaf-logo {
+    animation-name: pulse;
+    animation-duration: 1.5;
+    animation-iteration-count: infinite;
+    height: 275;
+}
+
+#city {
+    animation-name: bounceInRight;
+    animation-duration: 0.5;
+}
