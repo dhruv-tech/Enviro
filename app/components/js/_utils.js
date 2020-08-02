@@ -22,7 +22,7 @@ let utils = {
             console.log('hi2');
             geolocation.getCurrentLocation({}).then(result => {
                 console.log('hi3');
-                //https://api.openaq.org/v1/locations?coordinates=${result.latitude},${result.longitude}&radius=20000&order_by=distance
+                
                 fetch(`https://api.openaq.org/v1/locations?coordinates=${result.latitude},${result.longitude}&radius=20000&order_by=distance`).then(res => res.json()).then(d => { 
                     console.log('fetch1');
                     let returnable = {err: false, city: null, station: null};
