@@ -54,9 +54,9 @@ let utils = {
     },
 
     getStationData(identifier) {
-        console.log('stattion');
+        console.log('station');
         return new Promise((resolve, reject) => {
-
+            //${identifier}
             fetch(`https://api.data.gov.in/resource/3b01bcb8-0b14-4abf-b6f2-c1bfd384ba69?api-key=579b464db66ec23bdd0000011ae4fb263fc34bd24627884b4078f05c&format=json&offset=0&limit=1020&filters[station]=${identifier}`).then(res => res.json()).then(d => { 
                 console.log('fetch2');
                 returnable = {err: false};
@@ -76,7 +76,11 @@ let utils = {
     getProminent(data) {
 
         let highest = 0;
-        let prominent = '';
+        let prominent = '-';
+
+        if (data.length == 0) {
+            highest = '-';
+        }
 
         for (let rec of data) {
 
@@ -131,6 +135,29 @@ let utils = {
         console.log(returnable);
 
         return returnable;
+
+    },
+
+    getCityTrends(city, prominent) {
+        
+        return new Promise((resolve, reject) => {
+            fetch(`https://api.waqi.info/feed/${city}/?token=39b10b0d7d8f7a91af7d9291f6990f92d615cdb0`).then(res => res.json()).then(d => { 
+
+                prominent = prominent.toLowerCase();
+                prominent = prominent.replace('ozone', 'o3');
+
+                d = d.data;
+                
+                let returnable = {err: false, data: [d.forecast.daily[prominent][3], d.forecast.daily[prominent][4], d.forecast.daily[prominent][5]]};
+                
+                console.log(returnable.data);
+                resolve(returnable);
+        
+            }).catch(e => {
+                console.log(e);
+                reject({ err: true, msg: "Could not fetch city trends."});
+            });
+        });
 
     },
 

@@ -74,12 +74,33 @@ export default {
         loc.msg = metaData.msg;
         loc.prominentColorClass = metaData.class;
 
-        for(let rec of stationData.data) {
+        if (loc.data.length == 0) {
+            loc.data = [
+                { pollutant_avg: '-', pollutant_id: 'PM2.5'},
+                { pollutant_avg: '-', pollutant_id: 'PM10'},
+                { pollutant_avg: '-', pollutant_id: 'NO2'},
+                { pollutant_avg: '-', pollutant_id: 'NH3'},
+                { pollutant_avg: '-', pollutant_id: 'CO'},
+                { pollutant_avg: '-', pollutant_id: 'SO2'},
+                { pollutant_avg: '-', pollutant_id: 'OZONE'},
+
+            ]
+        }
+
+        for(let rec of loc.data) {
             metaData = utils.parseStatus(rec.pollutant_avg.replace("NA", "-"));
             loc.colorClasses.push(metaData.class);
         }
 
-        console.log("done");
+        console.log(loc.aqi);
+
+        /*let trends = [];
+
+        if (loc.prominent == 'PM2.5' || loc.prominent == 'PM10' || loc.prominent == 'OZONE') {
+            trends = await utils.getCityTrends(cityData.city, prominentInfo.prominent);
+        }
+    
+        console.log("done");*/
 
         resolve();
     })
