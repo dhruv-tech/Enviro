@@ -14,7 +14,7 @@
           <Label :text="location.city" class="title"/>
 
           <StackLayout backgroundColor="#ffffff" id="title-card" class="span-85 card">
-            <Label :text="location.msg" class="status satisfactory" :id="color"/>
+            <Label :text="location.msg" :class="'status '+location.prominentColorClass"/>
             <Label :text="location.station" class="location-area"/>
             <Label :text="'Prominent Pollutant: '+location.prominent" class="poll-main" />
           </StackLayout>
@@ -44,9 +44,39 @@
           </FlexboxLayout>
 
           <Label text="Air Composition" class="subtitle"/>
-          <FlexboxLayout flexDirection="column" backgroundColor="#ffffff" class="span-85 card">
-            
-          </FlexboxLayout>
+          <GridLayout rows="*, *, *" columns="*, *, *" backgroundColor="#ffffff" class="span-85 card" id="pollutants">
+            <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" row="0" col="0">
+              <Label :text="location.data[0].pollutant_avg" :class="'value '+location.colorClasses[0]"/>
+              <Label :text="location.data[0].pollutant_id" class="poll_name"/>
+            </FlexboxLayout>
+            <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" row="0" col="1">
+              <Label :text="location.data[1].pollutant_avg" :class="'value '+location.colorClasses[1]"/>
+              <Label :text="location.data[1].pollutant_id" class="poll_name"/>
+            </FlexboxLayout>
+            <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" row="0" col="2">
+              <Label :text="location.data[2].pollutant_avg" :class="'value '+location.colorClasses[2]"/>
+              <Label :text="location.data[2].pollutant_id" class="poll_name"/>
+            </FlexboxLayout>
+
+            <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" row="1" col="0">
+              <Label :text="location.data[3].pollutant_avg" :class="'value '+location.colorClasses[3]"/>
+              <Label :text="location.data[3].pollutant_id" class="poll_name"/>
+            </FlexboxLayout>
+            <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" row="1" col="1">
+              <Label :text="location.data[4].pollutant_avg" :class="'value '+location.colorClasses[4]"/>
+              <Label :text="location.data[4].pollutant_id" class="poll_name"/>
+            </FlexboxLayout>
+            <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" row="1" col="2">
+              <Label :text="location.data[5].pollutant_avg" :class="'value '+location.colorClasses[5]"/>
+              <Label :text="location.data[5].pollutant_id" class="poll_name"/>
+            </FlexboxLayout>
+
+            <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" row="2" col="0">
+              <Label :text="location.data[6].pollutant_avg" :class="'value '+location.colorClasses[6]"/>
+              <Label :text="location.data[6].pollutant_id" class="poll_name"/>
+            </FlexboxLayout>
+          
+          </GridLayout>
 
           <FlexboxLayout justifyContent="center" id="footer-logo">
             <GridLayout rows="auto" columns="135">

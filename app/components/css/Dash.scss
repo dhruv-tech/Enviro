@@ -1,26 +1,51 @@
-#Inadequate {
+.aqi_grey {
     color: #595959;
 }
 
-#Good {
+.aqi_brightgreen {
     color: #3BA810;
 }
 
-#Satisfactory {
+.aqi_green {
     color: #72B048;
 }
 
-#Moderate {
+.aqi_yellow {
     color: #A5B93F; 
 }
 
-#Poor {
+.aqi_amber {
     color: #BF9000;
 }
-#Very {
+.aqi_red {
     color: #D20000;
 }
 
-#Severe {
+.aqi_darkred {
     color: #640000;
+}
+
+#pollutants {
+    height: 170;
+    padding-top: 2;
+    padding-bottom: 2;
+}
+
+.value {
+    font-family: 'Poppins Bold', 'Poppins-Bold';
+    font-size: 15;
+}
+
+.poll_name {
+    margin-top: -7.5;
+    letter-spacing: 0.3;
+    color: rgb(88, 88, 88);
+}
+
+.location-area {
+    color: rgb(88, 88, 88);
+}
+
+.poll-main {
+    color: rgb(88, 88, 88);
 }
