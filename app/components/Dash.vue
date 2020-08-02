@@ -39,9 +39,29 @@
           </FlexboxLayout>
 
           <Label text="Trends" class="subtitle"/>
-          <FlexboxLayout flexDirection="column" backgroundColor="#ffffff" class="span-85 card">
-            
-          </FlexboxLayout>
+          <GridLayout rows="*, 25, 21" columns="*, *, *" backgroundColor="#ffffff" class="span-85 card" id="trends">
+            <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" row="0" col="0">
+              
+            </FlexboxLayout>
+            <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" row="1" col="0">
+              <Label text="Good"/>
+            </FlexboxLayout>
+            <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" row="1" col="1">
+              <Label text="Good"/>
+            </FlexboxLayout>
+            <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" row="1" col="2">
+              <Label text="Good"/>
+            </FlexboxLayout>
+            <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" row="2" col="0">
+              <Label text="in 24 hrs"/>
+            </FlexboxLayout>
+            <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" row="2" col="1">
+              <Label text="in 48 hrs"/>
+            </FlexboxLayout>
+            <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" row="2" col="2">
+              <Label text="in 72 hrs"/>
+            </FlexboxLayout>
+          </GridLayout>
 
           <Label text="Air Composition" class="subtitle"/>
           <GridLayout rows="*, *, *" columns="*, *, *" backgroundColor="#ffffff" class="span-85 card" id="pollutants">
